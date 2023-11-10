@@ -1,0 +1,35 @@
+        # CONSULTAS DE USUARIOS
+
+###
+GET http://localhost:3001/usuario/buscarTodos HTTP/1.1
+###
+GET http://localhost:3001/usuario/buscarUnico/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/usuario/agregar HTTP/1.1
+Content-Type: application/json
+
+{
+    "usuario_id":1,
+    "contrasenia":"Luis123",
+    "nombre": "Luis",
+    "apellido_Paterno": "Alberto",
+    "apellido_Materno": "Gutierrez",
+    "telefono": 1234567891
+}
+
+###
+PUT http://localhost:3001/usuario/modificar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Luis",
+    "apellido_Paterno": "Aguilar",
+    "apellido_Materno": "Mendez",
+    "telefono": 9612345687
+}
+
+###
+DELETE http://localhost:3001/usuario/eliminar/1 HTTP/1.1
+Content-Type: application/json

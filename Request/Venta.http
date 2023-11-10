@@ -1,0 +1,33 @@
+        # CONSULTAS DE USUARIOS
+
+###
+GET http://localhost:3001/venta/buscarTodos HTTP/1.1
+###
+GET http://localhost:3001/venta/buscarUnico/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/venta/agregar HTTP/1.1
+Content-Type: application/json
+
+{
+    "venta_id":1,
+    "usuario_id": 1,
+    "vendedor_id": 1,
+    "producto_id": 1
+}
+
+###
+PUT http://localhost:3001/venta/modificar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "venta_id":1,
+    "usuario_id": 1,
+    "vendedor_id": 1,
+    "producto_id": 1
+}
+
+###
+DELETE http://localhost:3001/venta/eliminar/1 HTTP/1.1
+Content-Type: application/json

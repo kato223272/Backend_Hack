@@ -1,0 +1,32 @@
+        # CONSULTAS DE PRODUCTOS
+###
+GET http://localhost:3001/producto/buscarTodos HTTP/1.1
+###
+GET http://localhost:3001/producto/buscarUnico/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/producto/agregar HTTP/1.1
+Content-Type: application/json
+
+{
+    "producto_id":1,
+    "nombre": "Toros",
+    "cantidad": 10,
+    "precio": 200
+}
+
+###
+PUT http://localhost:3001/producto/modificar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "producto_id":1,
+    "nombre": "Toros",
+    "cantidad": 10,
+    "precio": 200
+}
+
+###
+DELETE http://localhost:3001/producto/eliminar/1 HTTP/1.1
+Content-Type: application/json
